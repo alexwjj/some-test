@@ -1,4 +1,4 @@
-# 李雪扬 web 测试
+# 一些测试项目
 
 ## Project setup
 ```
@@ -14,11 +14,6 @@ npm run serve
 ```
 npm run build
 ```
+# 个人博客
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[点击直达](http://118.25.49.69)

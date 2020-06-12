@@ -159,7 +159,7 @@ export default {
       right: 40px;
       display: flex;
       align-items: center;
-      width: 20vw;
+      width: 30vw;
       justify-content: space-between;
       margin-left: 50px
     }

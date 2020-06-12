@@ -49,9 +49,10 @@ export default {
   background: linear-gradient(91deg,#f1eefc,#9dc6ff 70%,#a5bcff);
 }
 .login-box {
-  width: 20vw;
-  height: 25vh;
+  width: 500px;
+  height: 300px;
   display: flex;
+  border-radius:10px;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;

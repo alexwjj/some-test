@@ -2,21 +2,22 @@
   <div class="layout">
     <div style="height: 60px;background-color:white; position:relative;">
       <div class="layout-header">
-        <div class="header-logo">关心桥教育</div>
+        <div class="header-logo" @click="$router.push({path:'/login'})">关心桥教育</div>
         <div style="display:flex; align-items:center">
           <el-menu
-            :default-active="activeIndex"
+            :default-active="activePath"
             class="header-menu"
             text-color="#5d5e5d"
             active-text-color="#e72934"
             mode="horizontal"
+            router
             @select="handleSelect"
           >
-            <el-menu-item index="1">精品课程</el-menu-item>
-            <el-menu-item index="2">云课堂</el-menu-item>
-            <el-menu-item index="3">素养</el-menu-item>
-            <el-menu-item index="4">微课中心</el-menu-item>
-            <el-menu-item index="5">下载客户端</el-menu-item>
+            <el-menu-item index="/classroom">精品课程</el-menu-item>
+            <el-menu-item index="/cloudroom">云课堂</el-menu-item>
+            <el-menu-item index="/home">素养</el-menu-item>
+            <el-menu-item index="/miniroom">微课中心</el-menu-item>
+            <el-menu-item index="/about">下载客户端</el-menu-item>
           </el-menu>
         </div>
       </div>
@@ -79,7 +80,7 @@ export default {
           label: '北京烤鸭'
         }],
         value1: [],
-      activeIndex: "3",
+      activeIndex: "home",
       menuList: [],
       userInfo: "",
       restaurants: [],
@@ -93,6 +94,9 @@ export default {
     },
   },
   mounted() {
+    console.log(this.$route.path, 'this.$route.path;');
+    this.$router.push({path: '/home'})
+    console.log(this.$route.path, 'this.$route.path;');
     this.restaurants = this.loadAll();
   },
   methods: {
@@ -141,6 +145,7 @@ export default {
       height: 60px;
       line-height: 60px;
       font-size: 20px;
+      cursor: pointer;
     }
     .header-menu {
       display: flex;

@@ -12,7 +12,7 @@
       <video src="" controls="controls" class="home-video"></video>
       <div class="home-select">
         <h4>宪法系列剧：第二集 我国宪法是怎么诞生的</h4>
-        <div style="margin-top: 20px;border-bottom:1px solid #f5f5f8">
+        <div style="margin-top: 20px;border-bottom:1px solid #f5f5f8;font-size:14px;">
           <span class="tab-icon" @click="isShowTabList = !isShowTabList">
           <i class="el-icon-user"></i><span style="margin:0 5px">宪法达人</span
           >
@@ -43,7 +43,7 @@
           <el-pagination background layout="pager" :total="60"> </el-pagination>
         </div>
         <div class="select-content">
-          <div style="width:80vw">
+          <div style="flex:3">
             <span style="font-size:18px;">全部评论(28)</span>
             <div
               class="content-list"
@@ -53,7 +53,7 @@
               <img src="../../assets/love.png" alt="" class="avatar" />
               <div>
                 <div
-                  style="width:50vw;display:flex;justify-content:space-between;color:#adadad"
+                  style="width:45vw;display:flex;justify-content:space-between;color:#adadad"
                 >
                   <div>{{ item.name }}</div>
                   <div>{{ item.time }}</div>
@@ -62,7 +62,7 @@
               </div>
             </div>
           </div>
-          <div style="width:20vw">
+          <div style="flex:1">
             <span
               style="font-size:18px;margin-bottom:20px;display:inline-block;"
               >其他相关视频</span
@@ -72,7 +72,7 @@
               v-for="(item, index) in videoList"
               :key="index"
             >
-              <img src="../../assets/vide-gxq.png" alt="" class="video" />
+              <img src="../../assets/vide.jpg" alt="" class="video" />
               <div>
                 <div>{{ item.name }}</div>
                 <div style="margin-top:10px">面对疾风吧</div>
@@ -136,7 +136,7 @@ export default {
   color: #adadad;
 }
 .home-select {
-  padding: 10px;
+  padding: 20px;
   background: white;
   .tab-icon{
     color: #e72934;
@@ -152,11 +152,12 @@ export default {
       display: flex;
       height: 70px;
       margin-top: 20px;
+      padding-right: 20px;
       border-bottom: 1px solid #f5f6f8;
     }
     .video-list {
       display: flex;
-      padding: 15px;
+      padding: 15px 5px;
       color: #666;
       background-color: #f6f8fb;
       .video {

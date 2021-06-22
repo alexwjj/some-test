@@ -4,13 +4,13 @@
       <div class="login-content">
         <div class="login-title">登录</div>
         <div>
-          <input placeholder="请输入账号" v-model="loginForm.userName" />
+          <el-input placeholder="请输入账号" v-model="loginForm.userName" />
         </div>
         <div>
-          <input placeholder="请输入密码" type="password" v-model="loginForm.password" />
+          <el-input placeholder="请输入密码" type="password" v-model="loginForm.password" />
         </div>
         <div>
-          <button @click="onLogin">登录</button>
+          <el-button @click="onLogin" type="primary">登录</el-button>
         </div>
       </div>
     </div>
@@ -49,9 +49,10 @@ export default {
   background: linear-gradient(91deg,#f1eefc,#9dc6ff 70%,#a5bcff);
 }
 .login-box {
-  width: 400px;
-  height: 150px;
+  width: 500px;
+  height: 300px;
   display: flex;
+  border-radius:10px;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;

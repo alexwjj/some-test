@@ -1,6 +1,11 @@
 <template>
-  <div class='about'>
-    <img src="../../assets/专业团队.png" alt="" class="avatar">
+  <div class='classroom'>
+      <h1>精品课堂</h1> 
+      <div id="printDiv">
+      且随疾风前行，身后亦需流心
+    </div>
+
+    <el-button v-print="'#printDiv'">只打印指定 DOM</el-button>
   </div>
 </template>
 
@@ -20,12 +25,5 @@ export default {
 
 </script>
 <style lang='less' scoped>
-.about-title {
-    font-size: 20px;
-    font-weight: 800;
-    margin: 20px 0;
-}
-.avatar{
-  width: 100%;
-}
+
 </style>
